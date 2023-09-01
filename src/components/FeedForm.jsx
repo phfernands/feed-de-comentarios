@@ -1,5 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import TextInput from "./FormComponents/TextInput";
+import ComentaryInput from "./FormComponents/ComentaryInput";
 
 FeedForm.propTypes = {
   newComentary: PropTypes.func,
@@ -20,25 +22,13 @@ export default function FeedForm({ newComentary }) {
     <form onSubmit={submitComentary} className="feedFrom" action="">
       <h1>Feed de Comentários</h1>
       <div className="formDiv">
-        <label htmlFor="email">E-mail:</label>
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="inputText"
-          type="text"
-          id="email"
-          name="email"
-        />
+        <TextInput id="email" value={email} setValue={setEmail} />
       </div>
       <div className="formDiv">
-        <label htmlFor="comentary">Comentário:</label>
-        <textarea
-          value={comentary}
-          onChange={(e) => setComentary(e.target.value)}
-          className="inputText"
-          rows="10"
-          name="comentary"
+        <ComentaryInput
           id="comentary"
+          value={comentary}
+          setValue={setComentary}
         />
       </div>
       <div className="formDiv">
