@@ -2,4 +2,4 @@
 
 Exercício prático de React - Criação de um simples feed de comentários
 
-Faltando apenas refatorar para melhor apresentação dos códigos.
+[link](https://phfernands.github.io/feed-de-comentarios/)
